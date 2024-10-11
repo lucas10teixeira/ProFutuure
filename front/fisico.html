@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fisico.css">
+    <link rel="shortcut icon" type="imagex/png" href="./imgs/PROFUTURE.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="fisico.js"></script>
+    <title>Físico - Pro Future</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <img src="imgs/PROFUTURE.png" alt="Logo" class="logo">
+                <div class="navbar-cima">
+                    <a href="index.html" class="navbar-link">Início</a>
+                    <a href="opcao.html" class="navbar-link">Exercícios</a>
+                    <a href="sobre.html" class="navbar-link">Sobre</a>
+                    <a href="perfil.html" class="navbar-link">Perfil</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="home">
+            <div class="home-text">
+                <h4 class="text-h4">Atinga sua melhor forma fisíca</h4>
+                <h1 class="text-h1">Seu maior potencial</h1>
+                <p>Realize os exercícios que estão no site semanalmente, e veja sua grande evolução!</p>
+            </div>
+            <div class="home-img">
+                <img src="imgs/Soccer-bro.png" alt="hamburguer">
+            </div>
+        </section>
+    </main>
+
+    <section class="about" id="about">
+        <div class="row">
+            <div class="image">
+                <img src="imgs/Physical therapy exercise-rafiki (1).png" alt="">
+            </div>
+            <div class="content">
+                <h3>Porque o físico é importante?</h3>
+                <p>
+                    Para se destacar no futebol, não basta apenas ter talento; um bom preparo físico é fundamental. Atletas que não investem em treinamento físico adequado podem enfrentar dificuldades em campo, como falta de resistência, velocidade reduzida e maior risco de lesões.
+                </p>
+                <p>
+                    O condicionamento físico aprimora o desempenho, permite suportar a intensidade dos jogos e garante uma recuperação rápida. Portanto, para alcançar o sucesso e se tornar um jogador de destaque, é essencial dedicar-se ao desenvolvimento físico e ao preparo rigoroso
+                </p>
+                <a href="#" class="btn">MELHORAR</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="videos" id="videos">
+        <h2 class="videos-title">Vídeos de Exercícios</h2>
+        <div class="video-grid">
+            <div class="video-item">
+                <img src="imgs/futebol.png" alt="Vídeo 1">
+                <button class="video-btn" data-video="https://www.youtube.com/embed/i3-WS7YJ2O8?si=tsU6BbPXHbAy-u05">Assistir</button>
+            </div>
+            <div class="video-item">
+                <img src="imgs/futebol.png" alt="Vídeo 2">
+                <button class="video-btn" data-video="https://www.youtube.com/embed/WS7YJ2O8">Assistir</button>
+            </div>
+            <div class="video-item">
+                <img src="imgs/futebol.png" alt="Vídeo 3">
+                <button class="video-btn" data-video="https://www.youtube.com/embed/VIDEO_ID_3">Assistir</button>
+            </div>
+            <div class="video-item">
+                <img src="imgs/futebol.png" alt="Vídeo 4">
+                <button class="video-btn" data-video="https://www.youtube.com/embed/VIDEO_ID_4">Assistir</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modal for video -->
+    <div id="video-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="video-frame" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    
+    <script src="fisico.js"></script>
+</body>
+</html>
