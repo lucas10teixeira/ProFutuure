@@ -2,7 +2,8 @@ let button = document.getElementById("postButton");
 
 button.onclick = async function() {
     let descricao = document.getElementById("posttexto").value;
-    let data = { descricao };
+    let userId = localStorage.getItem('userId'); // Obter o ID do usuário de alguma forma
+    let data = { descricao, userId };
 
     if (!descricao) {
         Swal.fire('Preencha todos os campos!', '', 'error');

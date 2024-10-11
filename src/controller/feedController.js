@@ -1,11 +1,12 @@
 const connection = require('../config/db');
 const dotenv = require('dotenv').config();
 
-async function storefeed(request, response) {
-  const { descricao } = request.body;
 
-  const query = "INSERT INTO feed (descricao) VALUES (?)";
-  connection.query(query, [descricao], (err, results) => {
+async function storefeed(request, response) {
+  const { descricao, userId } = request.body;
+
+  const query = "INSERT INTO feed (descricao, user_id) VALUES (?, ?)";
+  connection.query(query, [descricao, userId], (err, results) => {
     if (err) {
       return response.status(400).json({
         success: false,
@@ -22,7 +23,7 @@ async function storefeed(request, response) {
 }
 
 async function getposts(request, response) {
-  const query = "SELECT id, descricao FROM feed";
+  const query = "SELECT f.id, f.descricao, t.nome AS username FROM feed f INNER JOIN task t ON f.user_id = t.id";
 
   connection.query(query, (err, results) => {
     if (err) {
