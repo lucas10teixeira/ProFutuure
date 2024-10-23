@@ -39,7 +39,7 @@ router.get('get/user/profile')
 /**
 * @swagger
 * /user/profile:
-*   post:
+*   get:
 *     summary: puxar dados para o perfil
 *     responses:
 *       200:

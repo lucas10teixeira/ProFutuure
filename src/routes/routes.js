@@ -22,7 +22,7 @@ router.put('/updateUserProfile/:id', profileController.updateUserProfile);
 /**
 * @swagger
 * /updateUserProfile/:id:
-*   get:
+*   put:
 *     summary: atualizar perfil ao editar
 *     responses:
 *       200:
