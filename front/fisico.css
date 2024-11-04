@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,17 +8,19 @@
     list-style: none;
     text-decoration: none;
 }
-:root{
-    --red:#d63a25;
-    --white:#fff;
-    --dark:#1e1c2a;
+
+:root {
+    --red: #d63a25;
+    --white: #fff;
+    --dark: #1e1c2a;
 }
-body{
+
+body {
     color: var(--dark);
     background: var(--white);
 }
 
-.home{
+.home {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -26,23 +28,28 @@ body{
     justify-content: space-between;
     padding: 0px 10%;
 }
-.home-text{
+
+.home-text {
     max-width: 37rem;
 }
-.home-text .text-h4{
+
+.home-text .text-h4 {
     font-size: 1.5rem;
     color: var(--red);
     margin-bottom: 1rem;
 }
-.home-text .text-h1{
+
+.home-text .text-h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
     line-height: 4rem;
 }
-.home-text p{
+
+.home-text p {
     margin-bottom: 4rem;
 }
-.home-btn{
+
+.home-btn {
     padding: 15px 45px;
     background: var(--red);
     color: var(--white);
@@ -50,13 +57,14 @@ body{
     font-weight: 700;
     transition: all 0.5s;
 }
-.home-btn:hover{
+
+.home-btn:hover {
     background: #fc4c35;
 }
-.home-img img{
+
+.home-img img {
     width: 85%;
 }
-
 
 .navbar {
     width: 100%;
@@ -99,9 +107,6 @@ body{
     padding: 8px 16px;
     display: inline-block;
 }
-
-
-
 
 .about .row {
     display: flex;
@@ -156,32 +161,43 @@ body{
     max-width: 1200px;
 }
 
-
-
+/* Vídeo Grid */
+/* Vídeo Grid */
+/* Vídeo Grid */
 /* Vídeo Grid */
 .video-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Largura mínima para 400px */
     gap: 20px;
     justify-content: center;
     margin: 20px 0;
 }
 
+/* Item de Vídeo */
 .video-item {
     position: relative;
-    width: 250px;
-    height: 140px;
+    overflow: hidden; /* Garante que nada saia do contêiner */
+    width: 100%; /* Adiciona largura total ao item do vídeo */
+    height: 250px; /* Aumenta a altura do item do vídeo */
 }
 
+/* Estilização da miniatura */
+.video-thumbnail {
+    width: 100%; /* A miniatura ocupa toda a largura do item */
+}
+
+/* Ajustes na imagem da miniatura */
 .video-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100%; /* A imagem ocupa 100% do contêiner */
+    height: 100%; /* Define altura 100% para a miniatura */
+    object-fit: cover; /* Garante que a imagem preencha o espaço mantendo a proporção */
+    display: block; /* Remove espaços em branco abaixo da imagem */
 }
 
+/* Botão de assistir */
 .video-btn {
     position: absolute;
-    bottom: 10px;
+    bottom: 10px; /* Ajusta a posição para a parte inferior */
     left: 50%;
     transform: translateX(-50%);
     background: rgba(0, 0, 0, 0.7);
@@ -189,7 +205,26 @@ body{
     border: none;
     padding: 10px;
     cursor: pointer;
+    border-radius: 5px; /* Arredondamento */
+    z-index: 3; /* Garante que o botão de assistir fique acima da miniatura */
 }
+
+/* Estilização do botão de exclusão */
+.delete-video-btn {
+    position: absolute; /* Posiciona o botão no mesmo contêiner do vídeo */
+    bottom: 200px; /* Aumenta a distância do botão de excluir para não colidir com o botão de assistir */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza o botão */
+    background-color: red; /* Cor de fundo do botão de exclusão */
+    color: white; /* Cor do texto */
+    border: none; /* Remove borda padrão */
+    border-radius: 3px; /* Bordas arredondadas para o botão */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    padding: 1px; /* Padding para um botão maior */
+    z-index: 1; /* Garante que o botão de excluir fique acima da miniatura */
+}
+
+
 
 /* Modal */
 .modal {
@@ -225,56 +260,14 @@ body{
     cursor: pointer;
 }
 
-
-
-/* Restante do CSS */
-
 /* Título dos Vídeos */
 .videos-title {
     text-align: center;
     font-size: 2.5rem;
     color: var(--dark);
-    margin: 30px 0;;
+    margin: 30px 0;
     padding-top: 1px;
 }
-
-/* Grid de Vídeos */
-.video-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dois vídeos por linha */
-    gap: 20px;
-    justify-content: center;
-    margin: 20px 0;
+#h3{
+    color: aqua;
 }
-
-.video-item {
-    position: relative;
-    width: 100%;
-    padding-top: 56.25%; /* Proporção 16:9 */
-    background: #f0f0f0;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.video-item img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.video-btn {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
