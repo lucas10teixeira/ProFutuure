@@ -79,18 +79,6 @@
     border-top: 1px solid #0056b3;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-    .navbar-links {
-        display: none;
-    }
-    .navbar-toggler {
-        display: block;
-    }
-    .navbar-collapse {
-        display: flex;
-    }
-}
 
 /* Container styles */
 .container {
@@ -122,10 +110,6 @@ textarea {
 }
 
 
-input[type="file"] {
-    margin-bottom: 1px;
-}
-
 button {
     width: 15%;
     margin-left: 77vw;
@@ -156,13 +140,6 @@ button:hover {
     max-width: 100%;
 }
 
-
-.post img {
-    max-width: 25%;
-    height: auto;
-    border-radius: 5px;
-    margin-top: 10px;
-}
 
 .post {
     position: relative;

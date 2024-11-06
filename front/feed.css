@@ -61,3 +61,19 @@ header ul li {
 
 }
    
+/* Exemplo de customização para o SweetAlert2 */
+.swal-title {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .swal-popup {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+  }
+  
+  .swal-confirm-button {
+    background-color: #007bff;
+    color: white;
+  }
+  
