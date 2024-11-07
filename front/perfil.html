@@ -6,8 +6,11 @@
     <link rel="stylesheet" href="perfil.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <script src="perfil.js" defer></script>
-    <script src="sweetalert2/dist/sweetalert2.min.js" defer></script>
-    <link rel="stylesheet" href="sweetalert2/dist/sweetalert2.min.css">
+
+    <!-- Link CDN do SweetAlert2 (versão correta) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
     <link rel="shortcut icon" type="image/png" href="./imgs/PROFUTURE.ico">
     <title>Editar Perfil - ProFuture</title>
 </head>
@@ -28,7 +31,7 @@
             <h1>Edite seu Perfil</h1>
             <form id="formulario">
                 <input class="name" type="text" name="nome" id="nome" placeholder="Nome">
-                <input class="sobre" type="text" name="sobre" id="sobre" placeholder="Sobre mim">
+                <textarea class="sobre" name="sobre" id="sobre" placeholder="Sobre mim"></textarea>
                 <button id="saveButton" type="submit">Salvar</button>
             </form>
         </section>

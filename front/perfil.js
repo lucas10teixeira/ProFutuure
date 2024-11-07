@@ -14,11 +14,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
 
             const userData = await response.json();
+            console.log(userData); // Confirme se os dados estão vindo corretamente.
 
-         
-            console.log(userData);
-
-            // coloc os dados do usuário aos campos HTML
             if (userData.success && userData.data) {
                 if (userData.data.nome) {
                     document.getElementById('nome').value = userData.data.nome;
@@ -37,11 +34,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    async function updateUserData() {
+    async function updateUserData(event) {
+        event.preventDefault(); // Para evitar o envio padrão do formulário
         let nome = document.getElementById("nome").value;
         let sobre = document.getElementById("sobre").value;
 
-        // Verifica se onome está em branco
         if (!nome.trim()) {
             Swal.fire('Erro', 'Por favor, preencha o nome antes de salvar!', 'error');
             return;
@@ -71,8 +68,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     let button = document.getElementById("saveButton");
-    button.onclick = updateUserData;
-
+    button.onclick = updateUserData;  // Ao clicar no botão, chama a função de update
 
     await fetchUserData();
 });
