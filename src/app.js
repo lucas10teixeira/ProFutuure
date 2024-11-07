@@ -2,6 +2,7 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
+const mysql = require('mysql2')
 const router = require('./routes/taskRouter');
 const feedrouter = require('./routes/feedRouter');
 const profileRoutes = require('./routes/routes');
