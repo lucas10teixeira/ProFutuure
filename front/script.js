@@ -41,7 +41,7 @@ button.onclick = async function() {
    
     let data = {nome,email,senha};
     
-    const response = await fetch ('https://pro-futuure.vercel.app/api/store/task', {
+    const response = await fetch ('http://localhost:3001/api/store/task', {
         method: "POST",
         headers: {"Content-type": "application/json;charset=UTF-8"},
         body: JSON.stringify(data)

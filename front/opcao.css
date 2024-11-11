@@ -9,7 +9,7 @@
   
   h2{
    
-      font-family: "Bungee", sans-serif;
+    font-family: 'Poppins', sans-serif;
       font-weight: 400;
       font-style: normal;
     
@@ -44,7 +44,7 @@
    
     position: relative;
     border-radius: 50px;
-    background: #f5e7e7;
+    background: #e7e5e5;
     transform-origin: center;
     overflow: hidden;
   }
@@ -56,8 +56,8 @@
     padding: 48px 0;
     font-size: 1.1rem;
     line-height: 1.1rem;
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 30%, rgba(0,0,0,0.9473039215686274) 54%, rgba(0,0,0,0.7820378151260504) 67%, rgba(0,59,0,0.8492647058823529) 120%);  
+    background: rgb(255, 253, 253);
+    
   }
     .articles {
     display: grid;
@@ -70,7 +70,7 @@
 
   *{
 
-      font-family: "Bad Script", cursive;
+    font-family: 'Poppins', sans-serif;
       font-weight: 400;
       font-style: normal;
     padding: 0px;
