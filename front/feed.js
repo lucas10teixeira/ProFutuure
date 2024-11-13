@@ -75,9 +75,11 @@ async function exibirInformacoesUsuario(userId) {
     const dados = await response.json();
     
     if (dados.success && dados.data) {
+      const sobreTexto = dados.data.sobre || ""; // se nao houver "sobre" retonar valor vazio
+      
       Swal.fire({
         title: `<strong>${dados.data.nome}</strong>`,
-        html: `<p><strong>Sobre:</strong> ${dados.data.sobre}</p>`,
+        html: `<p><strong>Sobre:</strong> ${sobreTexto}</p>`,
         icon: 'info',
         confirmButtonText: 'Fechar'
       });
@@ -88,6 +90,7 @@ async function exibirInformacoesUsuario(userId) {
     console.error('Erro na requisição para buscar dados do usuário:', response.status);
   }
 }
+
 
 // Função para enviar um novo post
 async function enviarPost(event) {
