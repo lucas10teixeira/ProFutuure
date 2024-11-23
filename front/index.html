@@ -31,17 +31,31 @@
         </div>
     </nav>
     <div class="container">
-      
         <form id="postfeed">
-         
-            <textarea id="posttexto" placeholder="Conte sobre suas experiências, histórias e momentos importantes que voçê vivenciou no futebol!"></textarea>
-           
-            <button id ="postButton" type="submit">Postar</button>
+            <textarea id="posttexto" placeholder="Conte sobre suas experiências, histórias e momentos importantes que você vivenciou no futebol!"></textarea>
+            <button id="postButton" type="submit">Postar</button>
         </form>
         <div id="feed"></div>
+        <!-- Modal para Comentários -->
+
+<div id="comentariosModal" class="modal">
+    <div class="modal-content">
+      <span id="fecharModalBtn" class="close">&times;</span>
+      <h2>Comentários</h2>
+      <div id="modalComentariosContainer"></div>
+      <!-- Aqui está o campo de comentário -->
+      <textarea id="comentarioTexto" placeholder="Escreva seu comentário..."></textarea>
+      <button id="enviarComentarioBtn">Enviar</button>
+      <!-- ID escondido para armazenar o postId -->
+      <input type="hidden" id="comentariosPostId" />
+    </div>
+  </div>
+  
+    </div>
+  </div>
+  
     </div>
  
-    <script src="bdfeed.js"></script>
     <script src="feed.js"></script>
 </body>
 </html>

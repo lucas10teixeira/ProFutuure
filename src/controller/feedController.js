@@ -77,8 +77,11 @@ async function deletepost(request, response) {
     });
   });
 }
+
+
 module.exports = {
   storefeed,
   getposts,
   deletepost
+  
 };

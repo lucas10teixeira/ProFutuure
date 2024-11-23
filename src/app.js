@@ -14,6 +14,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/api', router);
+app.use('/api/comments', feedrouter);
 app.use('/api', feedrouter);
 app.use('/api', profileRoutes);
 app.use('/api', videoRouter); // Nova rota de vídeos
