@@ -125,6 +125,31 @@ async function carregarComentariosModal(postId) {
   }
 }
 
+// Função para fechar o modal
+function fecharModalComentarios() {
+  const modal = document.getElementById('comentariosModal');
+  modal.style.display = 'none';
+}
+
+// Evento de clique no botão de fechar modal
+document.getElementById('fecharModalBtn').addEventListener('click', fecharModalComentarios);
+
+// Evento de enviar comentário do modal
+document.getElementById('enviarComentarioBtn').addEventListener('click', enviarComentarioModal);
+
+// Evento de clique no botão de postar
+document.getElementById('postButton').addEventListener('click', enviarPost);
+
+// Carregar postagens ao inicializar a página
+document.addEventListener('DOMContentLoaded', () => {
+  if (localStorage.getItem('userId')) {
+    carregarPostagens();
+  } else {
+    console.error('ID do usuário não encontrado.');
+  }
+});
+
+
 // Função para enviar um novo comentário
 async function enviarComentarioModal(event) {
   event.preventDefault();
@@ -186,33 +211,6 @@ async function excluirPostagem(postId) {
     console.error('Erro na requisição para excluir postagem:', response.status);
   }
 }
-
-<<<<<<< HEAD
-=======
-// Função para exibir informações do usuário
-async function exibirInformacoesUsuario(userId) {
-  const response = await fetch(`http://localhost:3001/api/user/${userId}`);
-  
-  if (response.ok) {
-    const dados = await response.json();
-    
-    if (dados.success && dados.data) {
-      const sobreTexto = dados.data.sobre || ""; // se nao houver "sobre" retonar valor vazio
-      
-      Swal.fire({
-        title: `<strong>${dados.data.nome}</strong>`,
-        html: `<p><strong>Sobre:</strong> ${sobreTexto}</p>`,
-        icon: 'info',
-        confirmButtonText: 'Fechar'
-      });
-    } else {
-      console.error('Erro ao buscar dados do usuário:', dados);
-    }
-  } else {
-    console.error('Erro na requisição para buscar dados do usuário:', response.status);
-  }
-}
->>>>>>> c27170c62eba2e4933afb80d4d4c2357fbe5d1e1
 
 
 // Função para enviar um novo post

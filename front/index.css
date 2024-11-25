@@ -179,7 +179,18 @@ form {
     text-decoration: none;
     cursor: pointer;
   }
-  
+
+  button#enviarComentarioBtn{
+    color: #ffffff;
+    background-color: #000000;
+    margin-left: 850px;
+  }
+   button.comment-btn{
+    margin-left: 0px;
+    
+    
+    
+  }
 textarea {
     width: 98%;
     height: 150px;
@@ -189,7 +200,19 @@ textarea {
     border-radius: 5px;
     resize: none;
 }
-
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    position: relative;
+    border-radius: 8px;
+  }
+  
+  .modal h2 {
+    margin-top: 0;
+  }
 
 button {
     width: 15%;
@@ -276,11 +299,13 @@ button {
     margin-bottom: 20px;
   }
   
-  .delete-btn {
+  button.delete-btn {
+    position: absolute;
     background-color: transparent;
     border: none;
+    top: 50px;
     color: rgb(0, 0, 0); /* Cor do ícone de excluir */
-   
+    margin-top: 90px;
     cursor: pointer;
     margin-left: 10px; /* Distância do ícone de comentário */
   }
